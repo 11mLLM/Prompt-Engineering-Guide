@@ -19,62 +19,61 @@ input: [입력]
 rule: [입력 처리 방법에 대한 지침]
 
 내가 제공한 세부 정보를 바탕으로 이 함수에 대한 출력을 제공해. 도와주면 좋겠어. 땡큐!
-대괄호 안의 텍스트는 내가 수행하고자 하는 기능에 대한 관련 정보로 대체할 거야. 이렇게 자세히 소개하면 내 요청을 더 효율적으로 이해하고 원하는 출력을 제공하는데 도움이 될거야. 형식은 function_name(input) 이며, 이해했으면 ok 한단어만 출력해.
+대괄호 안의 텍스트(text)는 내가 수행하고자 하는 기능에 대한 관련 정보로 대체할 거야. 이렇게 자세히 소개하면 내 요청을 더 효율적으로 이해하고 원하는 출력을 제공하는데 도움이 될거야. 형식은 function_name(input) 이며, 이해했으면 ok 한단어만 출력해.
 ```
 
 
-## Examples 
+## 예시
 
-### English study assistant
-For example, let's say we want to use GPT to aid us in our English studies. We can simplify the process by creating a series of functions.
+### 영어 공부 도우미
+예를 들어 영어 공부를 돕기 위해 GPT를 사용한다고 가정해 보겠습니다. 일련의 함수를 만들어 프로세스를 단순화 할 수 있습니다.
 
-This example has been tested on GPT3.5 and performs even better on GPT4
+이 프롬프트는 GPT 3.5에서 실행되었고, GPT 4에서 더 잘됩니다.
 
-#### Function description
-We need to paste the **meta prompt** that was defined above the section in GPT
+#### 함수 설명
+**메타 프롬프트**를 GPT에 먼저 붙여 넣어야 합니다.
 
-Then we will create a function `trans_word`.  
-This function prompts GPT to translate Chinese into English.
+다음으로 우리는 `trans_word`라는 함수를 만들 것입니다.
+이 함수 프롬프트는 GPT가 중국어를 영어로 번역하게 만듭니다.
 
-*Prompt:*
+*프롬프트:*
 ```
 function_name: [trans_word]
-input: ["text"]
-rule: [I want you to act as an English translator, spelling corrector and improver. I will provide you with input forms including "text" in any language and you will detect the language, translate it and answer in the corrected of my text, in English.]
+input: ["텍스트"]
+rule: [너는 영어 번역가, 맞춤법 교정자 및 개선자야. 내가 어떤 언어로든 "텍스트"를 포함한 입력 양식을 제공하면, 내 텍스트를 영어로 ]
 ```
 
+텍스트를 확장하는 함수를 작성해 봅니다.
 
-Write a function that expands text.
-
-*Prompt:*
+*프롬프트:*
 ```
 function_name: [expand_word]
-input: ["text"]
-rule: [Please serve as a Chatterbox, spelling corrector, and language enhancer. I will provide you with input forms including "text" in any language, and output the original language.I want you to Keep the meaning same, but make them more literary.]
+input: ["텍스트"]
+rule: [투머치토커인 맞춤법 교정자 및 개선자로 일해. 어떤 언어로든 "텍스트"를 포함한 입력 양식과 원어 출력을 제공할 거야. 의미는 유지하면서 문학적으로 바꿔줘]
 ```
 
-Write a function that corrects text.
+텍스트를 교정하는 함수를 작성합니다.
 
-*Prompt:*
+*프롬프트:*
 ```
 function_name: [fix_english]
-input: ["text"]
-rule: [Please serve as an English master, spelling corrector, and language enhancer. I will provide you with input forms including "text", I want you to improve the text's vocabulary and sentences with more natural and elegent. Keep the meaning same.]
+input: ["텍스트"]
+rule: [영어 마스터이자 맞춤법 교장자 및 언어 개선자로 일해. "텍스트"를 포함한 입력 양식을 줄거야. 이 입력을 좀 더 자연스럽고 우아한 단어, 문장을 사용하게 개선해줘. 의미는 유지한 채로.]
 ```
-Finally, you can run the function independently or chain them together.
 
-*Prompt:*
+마지막으로 함수를 독립적으로 실행하거나 함께 연결(chain)할 수 있습니다.
+
+*프롬프트:*
 ```
 trans_word('婆罗摩火山处于享有“千岛之国”美称的印度尼西亚. 多岛之国印尼有4500座之多的火山, 世界著名的十大活火山有三座在这里.')
 fix_english('Finally, you can run the function independently or chain them together.')
 fix_english(expand_word(trans_word('婆罗摩火山处于享有“千岛之国”美称的印度尼西亚. 多岛之国印尼有4500座之多的火山, 世界著名的十大活火山有三座在这里.')))
 ```
-By representing the functions in this format, you can clearly see each function's name, input, and the rule to process the input. It provides an organized way to understand the functionality and purpose of each step in the workflow
+함수를 이 형식으로 표현하면 각 함수의 이름, 입력, 입력을 처리하는 규칙을 명확하게 볼 수 있습니다. 이를 통해 워크플로우의 각 단계의 기능과 목적을 체계적으로 이해할 수 있습니다.
 
-_tips:_
-If you don't want ChatGPT to output excessive information, you can simply add a sentence after defining the function's rules.
-```
-DO NOT SAY THINGS ELSE OK, UNLESS YOU DONT UNDERSTAND THE FUNCTION
+_팁:_
+ChatGPT가 과도한 정보를 출력하지 않도록 하려면 함수의 규칙을 정의한 후 아래 문장을 추가하면 됩니다. ```
+이해했으면 OK만 출력해
 ```
 
 ### Multiple params function
