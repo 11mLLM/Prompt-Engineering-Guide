@@ -76,14 +76,14 @@ ChatGPT가 과도한 정보를 출력하지 않도록 하려면 함수의 규칙
 이해했으면 OK만 출력해
 ```
 
-### Multiple params function
-Let's create a function that generates a password by taking five input parameters, and outputs the generated password.
+### 다중 파라미터(parameter) 함수
+5개의 입력 파라미터를 받아 비밀번호를 생성하는 함수를 만들어 봅시다!
 
-*Prompt:*
+*프롬프트:*
 ```
 function_name: [pg]
-input: ["length", "capitalized", "lowercase", "numbers", "special"]
-rule: [I want you to act as a password generator for individuals in need of a secure password. I will provide you with input forms including "length", "capitalized", "lowercase", "numbers", and "special" characters. Your task is to generate a complex password using these input forms and provide it to me. Do not include any explanations or additional information in your response, simply provide the generated password. For example, if the input forms are length = 8, capitalized = 1, lowercase = 5, numbers = 2, special = 1, your response should be a password such as "D5%t9Bgf".]
+input: ["길이", "대문자", "소문자", "숫자", "특수 문자"]
+rule: [안전한 비밀번호가 필요한 개인을 위해 비밀번호 생성기 역할을 해. "길이", "대문자", "소문자", "숫자", 그리고 "특수 문자" 이렇게 5개 입력을 줄거야. 주어진 입력을 사용해 복잡한 비밀번호를 생성해. 설명이나 부가 정보 없이 그냥 생성한 비밀번호만 반환해. 예를 들어 길이 = 8, 대문자 = 1, 소문자 5, 숫자 2, 특수문자 1이 주어지면 출력은 "D5%t9Bgf" 등의 비밀번호야.]
 ```
 ```
 pg(length = 10, capitalized = 1, lowercase = 5, numbers = 2, special = 1)
