@@ -83,10 +83,10 @@ ChatGPT가 과도한 정보를 출력하지 않도록 하려면 함수의 규칙
 ```
 function_name: [pg]
 input: ["길이", "대문자", "소문자", "숫자", "특수 문자"]
-rule: [안전한 비밀번호가 필요한 개인을 위해 비밀번호 생성기 역할을 해. "길이", "대문자", "소문자", "숫자", 그리고 "특수 문자" 이렇게 5개 입력을 줄거야. 주어진 입력을 사용해 복잡한 비밀번호를 생성해. 설명이나 부가 정보 없이 그냥 생성한 비밀번호만 반환해. 예를 들어 길이 = 8, 대문자 = 1, 소문자 5, 숫자 2, 특수문자 1이 주어지면 출력은 "D5%t9Bgf" 등의 비밀번호야.]
+rule: [안전한 비밀번호가 필요한 개인을 위해 비밀번호 생성기 역할을 해. "길이", "대문자", "소문자", "숫자", 그리고 "특수 문자" 이렇게 5개 입력을 줄거야. 주어진 입력을 사용해 복잡한 비밀번호를 생성해. 설명이나 부가 정보 없이 그냥 생성한 비밀번호만 반환해. 예를 들어 길이 = 8, 대문자 = 1, 소문자 = 5, 숫자 = 2, 특수문자 = 1이 주어지면 출력은 "D5%t9Bgf" 등의 비밀번호가 되는 거야.]
 ```
 ```
-pg(length = 10, capitalized = 1, lowercase = 5, numbers = 2, special = 1)
+pg(길이 = 10, 대문자 = 1, 소문자 = 5, 숫자 = 2, 특수 문자 = 1)
 pg(10,1,5,2,1)
 ```
 
@@ -98,6 +98,6 @@ pg(10,1,5,2,1)
 - [LangChain](https://github.com/hwchase17/langchain)
 - [marvin](https://github.com/PrefectHQ/marvin)
 
-하지만 프로젝트들은 제품의 구매자 혹은 파이썬(Python) 이나 다른 프로그래밍 언어를 작성할 수 있는 사람들을 대상으로 합니다.
+하지만 이 프로젝트들은 제품의 구매자 혹은 파이썬(Python) 이나 다른 프로그래밍 언어를 작성할 수 있는 사람들을 대상으로 합니다.
 일반 유저들은 간단한 탬플릿을 일상에 반복적으로 사용합니다. 노트 어플리케이션을 이용해 함수를 작성하고 라이브러리로 업데이트 할 수도 있습니다.
 대체제로 [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web), [chatbox](https://github.com/Bin-Huang/chatbox), [PromptAppGPT](https://github.com/mleoking/PromptAppGPT), 그리고 [ChatGPT-Desktop](https://github.com/lencx/ChatGPT) 등의 몇몇 오픈 소스 ChatGPT 도구를 사용할 수 있습니다. 현재 ChatGPT-Next-Web은 새로운 채팅을 시작하기 전 few shot을 더하는 것을 허용합니다. PromptAppGPT는 프롬프트 탬플릿을 베이스로 한 웹 어플리케이션을 로우-코드(low-code)로 작성할 수 있게 하여, AutoGPT 비슷한 어플리케이션을 프롬프트 몇 라인으로 만들 수 있도록 합니다. 이러한 도구들을 이용해 함수를 만들고 사용할 수 있습니다.
