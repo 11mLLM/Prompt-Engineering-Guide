@@ -8,7 +8,7 @@ GPT의 대화 인터페이스와 프로그래밍 언어의 쉘(shell)을 유사�
 함수를 사용하기 전에 GPT에 함수에 대해 알려줘야 합니다. 다음은 함수를 정의하는 프롬프트 입니다.
 
 *프롬프트:*
-> 이 프롬프트를 **(메타 프롬프트)meta prompt** 라고 부릅시다.  
+> 이 프롬프트를 **메타 프롬프트(meta prompt)** 라고 부릅시다.  
 이 프롬프트는 GPT 3.5에서 실행되었고, GPT 4에서 더 잘됩니다.
 
 ```
@@ -40,7 +40,7 @@ rule: [입력 처리 방법에 대한 지침]
 ```
 function_name: [trans_word]
 input: ["텍스트"]
-rule: [너는 영어 번역가, 맞춤법 교정자 및 개선자야. 내가 어떤 언어로든 "텍스트"를 포함한 입력 양식을 제공하면, 내 텍스트를 영어로 ]
+rule: [너는 영어 번역가, 맞춤법 교정자이자 언어 개선자야. 내가 어떤 언어로든 "텍스트"를 포함한 입력 양식을 제공하면, 내 텍스트를 영어로 번역해]
 ```
 
 텍스트를 확장하는 함수를 작성해 봅니다.
@@ -49,7 +49,7 @@ rule: [너는 영어 번역가, 맞춤법 교정자 및 개선자야. 내가 어
 ```
 function_name: [expand_word]
 input: ["텍스트"]
-rule: [투머치토커인 맞춤법 교정자 및 개선자로 일해. 어떤 언어로든 "텍스트"를 포함한 입력 양식과 원어 출력을 제공할 거야. 의미는 유지하면서 문학적으로 바꿔줘]
+rule: [너는 투머치토커인 맞춤법 교정자이자 언어 개선자야. 어떤 언어로든 "텍스트"를 포함한 입력 양식과 원어 출력을 제공할 거야. 의미는 유지하면서 문학적으로 바꿔줘]
 ```
 
 텍스트를 교정하는 함수를 작성합니다.
@@ -100,4 +100,5 @@ pg(10,1,5,2,1)
 
 하지만 이 프로젝트들은 제품의 구매자 혹은 파이썬(Python) 이나 다른 프로그래밍 언어를 작성할 수 있는 사람들을 대상으로 합니다.
 일반 유저들은 간단한 탬플릿을 일상에 반복적으로 사용합니다. 노트 어플리케이션을 이용해 함수를 작성하고 라이브러리로 업데이트 할 수도 있습니다.
-대체제로 [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web), [chatbox](https://github.com/Bin-Huang/chatbox), [PromptAppGPT](https://github.com/mleoking/PromptAppGPT), 그리고 [ChatGPT-Desktop](https://github.com/lencx/ChatGPT) 등의 몇몇 오픈 소스 ChatGPT 도구를 사용할 수 있습니다. 현재 ChatGPT-Next-Web은 새로운 채팅을 시작하기 전 퓨샷(few-shot)을 더하는 것을 허용합니다. PromptAppGPT는 프롬프트 탬플릿을 베이스로 한 웹 어플리케이션을 로우-코드(low-code)로 작성할 수 있게 하여, AutoGPT 비슷한 어플리케이션을 프롬프트 몇 라인으로 만들 수 있도록 합니다. 이러한 도구들을 이용해 함수를 만들고 사용할 수 있습니다.
+대체제로 [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web), [chatbox](https://github.com/Bin-Huang/chatbox), [PromptAppGPT](https://github.com/mleoking/PromptAppGPT), 그리고 [ChatGPT-Desktop](https://github.com/lencx/ChatGPT) 등의 몇몇 오픈 소스 ChatGPT 도구를 사용할 수 있습니다. 현재 ChatGPT-Next-Web은 새로운 채팅을 시작하기 전 퓨샷(few-shot)을 더하는 것을 허용합니다. PromptAppGPT는 프롬프트 탬플릿을 베이스로 한 웹 어플리케이션을 로우-코드(low-code)로 작성할 수 있게 하여, AutoGPT 비슷한 어플리케이션을 프롬프트 몇 라인으로 만들 수 있도록 합니다. 
+이러한 도구들을 이용해 함수를 만들고 사용할 수 있습니다.
