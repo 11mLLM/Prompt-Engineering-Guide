@@ -1,4 +1,4 @@
-# 함수 프롬프트(Prompt Function)
+# 프롬프트 함수(Prompt Function)
 
 ## 도입
 GPT의 대화 인터페이스와 프로그래밍 언어의 쉘(shell)을 유사하게  생각하면  프롬프트(prompt)를 캡슐화(encapsulation) 하는 것은 함수를 생성하는 것으로 생각할 수 있습니다. 이 함수는 고유한 이름을 가지며, 문자 입력과 함께 이 이름을 호출하면, 설정된 내부 규칙에 따라 결과를 생성합니다. 간단히 말해, GPT를 쉽게 사용할 수 있도록 이름과 함께 재사용 가능한 프롬프트를 만든다는 것입니다. GPT가 우리대신 특정 작업을 수행하는 편리한 도구가 되는 것과 같습니다. - 우리는 그냥 입력을 주고, 원하는 결과를 돌려 받는 것입니다.
@@ -34,7 +34,7 @@ rule: [입력 처리 방법에 대한 지침]
 **메타 프롬프트**를 GPT에 먼저 붙여 넣어야 합니다.
 
 다음으로 우리는 `trans_word`라는 함수를 만들 것입니다.
-이 함수 프롬프트는 GPT가 중국어를 영어로 번역하게 만듭니다.
+이 프롬프트 함수는 GPT가 중국어를 영어로 번역하게 만듭니다.
 
 *프롬프트:*
 ```
@@ -100,4 +100,4 @@ pg(10,1,5,2,1)
 
 하지만 이 프로젝트들은 제품의 구매자 혹은 파이썬(Python) 이나 다른 프로그래밍 언어를 작성할 수 있는 사람들을 대상으로 합니다.
 일반 유저들은 간단한 탬플릿을 일상에 반복적으로 사용합니다. 노트 어플리케이션을 이용해 함수를 작성하고 라이브러리로 업데이트 할 수도 있습니다.
-대체제로 [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web), [chatbox](https://github.com/Bin-Huang/chatbox), [PromptAppGPT](https://github.com/mleoking/PromptAppGPT), 그리고 [ChatGPT-Desktop](https://github.com/lencx/ChatGPT) 등의 몇몇 오픈 소스 ChatGPT 도구를 사용할 수 있습니다. 현재 ChatGPT-Next-Web은 새로운 채팅을 시작하기 전 few shot을 더하는 것을 허용합니다. PromptAppGPT는 프롬프트 탬플릿을 베이스로 한 웹 어플리케이션을 로우-코드(low-code)로 작성할 수 있게 하여, AutoGPT 비슷한 어플리케이션을 프롬프트 몇 라인으로 만들 수 있도록 합니다. 이러한 도구들을 이용해 함수를 만들고 사용할 수 있습니다.
+대체제로 [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web), [chatbox](https://github.com/Bin-Huang/chatbox), [PromptAppGPT](https://github.com/mleoking/PromptAppGPT), 그리고 [ChatGPT-Desktop](https://github.com/lencx/ChatGPT) 등의 몇몇 오픈 소스 ChatGPT 도구를 사용할 수 있습니다. 현재 ChatGPT-Next-Web은 새로운 채팅을 시작하기 전 퓨샷(few-shot)을 더하는 것을 허용합니다. PromptAppGPT는 프롬프트 탬플릿을 베이스로 한 웹 어플리케이션을 로우-코드(low-code)로 작성할 수 있게 하여, AutoGPT 비슷한 어플리케이션을 프롬프트 몇 라인으로 만들 수 있도록 합니다. 이러한 도구들을 이용해 함수를 만들고 사용할 수 있습니다.
